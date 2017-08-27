@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="3350 1250.842 180.383 180.383">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #2593ff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2593ff"/>
+      <stop offset="1" stop-color="#00cbff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_147" data-name="Group 147" transform="translate(3350 1250.842)">
+    <g id="Clipboard" transform="translate(0 0)">
+      <path id="Path_138" data-name="Path 138" class="cls-1" d="M123.255,15.032H91.839a22.458,22.458,0,0,0-42.39,0H18.032A15.076,15.076,0,0,0,3,30.064V150.319a15.076,15.076,0,0,0,15.032,15.032H123.255a15.076,15.076,0,0,0,15.032-15.032V30.064A15.076,15.076,0,0,0,123.255,15.032Zm-52.612,0a7.516,7.516,0,1,1-7.516,7.516A7.538,7.538,0,0,1,70.644,15.032Zm52.612,135.287H18.032V30.064H33.064V52.612h75.16V30.064h15.032Z" transform="translate(19.548)"/>
+      <path id="Path_139" data-name="Path 139" class="cls-2" d="M0,0H180.383V180.383H0Z"/>
+    </g>
+    <g id="ic_trending_up_black_24px" transform="translate(48.752 64.805)">
+      <path id="Path_187" data-name="Path 187" class="cls-3" d="M50,6l7.851,7.851L41.119,30.582,27.405,16.868,2,42.308l4.834,4.834L27.405,26.571,41.119,40.285l21.6-21.565,7.851,7.851V6Z" transform="translate(4.857 14.571)"/>
+      <path id="Path_188" data-name="Path 188" class="cls-2" d="M0,0H82.284V82.284H0Z"/>
+    </g>
+  </g>
+</svg>

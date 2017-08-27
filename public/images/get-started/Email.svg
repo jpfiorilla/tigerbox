@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7167 -2062.544 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        <!--fill: none;-->
+      }
+
+      .cls-2 {
+        <!--fill: #2d2e2e;-->
+      }
+    </style>
+  </defs>
+  <g id="Email" transform="translate(-7167 -2062.544)">
+    <path id="Path_153" data-name="Path 153" fill="none" d="M0,0H34V34H0Z"/>
+    <path id="Path_154" data-name="Path 154" fill="#2d2e2e" d="M27.5,4H4.833A2.83,2.83,0,0,0,2.014,6.833L2,23.833a2.842,2.842,0,0,0,2.833,2.833H27.5a2.842,2.842,0,0,0,2.833-2.833v-17A2.842,2.842,0,0,0,27.5,4Zm0,19.833H4.833V9.667L16.167,16.75,27.5,9.667ZM16.167,13.917,4.833,6.833H27.5Z" transform="translate(0.833 1.667)"/>
+  </g>
+</svg>

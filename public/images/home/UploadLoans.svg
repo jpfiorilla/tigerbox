@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2387 1232.133 233.356 213.065">
+  <defs>
+    <style>
+      .cls-1 {
+        <!--fill: none;-->
+      }
+
+      .cls-2 {
+        <!--fill: url(#linear-gradient);-->
+      }
+
+      .cls-3 {
+        <!--fill: url(#linear-gradient-2);-->
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-0.868" y1="1.868" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2593ff"/>
+      <stop offset="1" stop-color="#00cbff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" y2="-0.302" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_203" data-name="Group 203" transform="translate(2387 1232.133)">
+    <g id="Arrow" transform="translate(93.674 69.841) rotate(-45)">
+      <path id="Path_105" data-name="Path 105" fill="none" d="M0,0H98.77V98.77H0Z"/>
+      <path id="Path_106" data-name="Path 106" fill="url(#linear-gradient)" d="M20.577,0V8.231H47.7L0,55.929l5.8,5.8,47.7-47.7V41.154h8.231V0Z" transform="translate(16.462 20.577)"/>
+    </g>
+    <g id="GraduationCap" transform="translate(0 56.464)">
+      <path id="Path_124" data-name="Path 124" fill="none" d="M0,0H156.6V156.6H0Z"/>
+      <path id="Path_125" data-name="Path 125" fill="url(#linear-gradient-2)" d="M27.1,69.425v26.1l45.675,24.926,45.675-24.926v-26.1L72.776,94.351ZM72.776,3,1,42.15,72.776,81.3,131.5,49.263V94.351h13.05V42.15Z" transform="translate(5.525 16.575)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+#nextAndBackButtons {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+	.nextButton, .backButton, .doneButton {
+		font-size: 15px;
+		border: none;
+		padding: 15px 45px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.backButton {
+		color: $blue;
+		background-color: $white;
+	}
+	.nextButton, .doneButton {
+		background-color: $blue;
+		color: $white;
+		transition: background-color 0.2s ease;
+	}
+}

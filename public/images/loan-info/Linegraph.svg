@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7103 725 37 37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2d2e2e;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Linegraph" transform="translate(-7103 725)">
+    <path id="Path_165" data-name="Path 165" class="cls-1" d="M4.312,25.521l9.25-9.265,6.167,6.167,13.1-14.738L30.66,5.51,19.729,17.8,13.562,11.63,2,23.208Z" transform="translate(1.083 2.985)"/>
+    <path id="Path_166" data-name="Path 166" class="cls-2" d="M0,0H37V37H0Z"/>
+  </g>
+</svg>

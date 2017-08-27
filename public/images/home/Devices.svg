@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2870 1243.546 194.978 194.978">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2593ff"/>
+      <stop offset="1" stop-color="#00cbff"/>
+    </linearGradient>
+  </defs>
+  <g id="DevicesCool" transform="translate(2870 1243.546)">
+    <path id="Path_196" data-name="Path 196" class="cls-1" d="M0,0H194.978V194.978H0Z"/>
+    <path id="Path_197" data-name="Path 197" class="cls-2" d="M186.854,75.2l-40.62-.081a8.148,8.148,0,0,0-8.124,8.124v73.117a8.148,8.148,0,0,0,8.124,8.124h40.62a8.148,8.148,0,0,0,8.124-8.124V83.241A8.079,8.079,0,0,0,186.854,75.2Zm0,73.036h-40.62V91.365h40.62ZM162.482,2H16.248A16.192,16.192,0,0,0,0,18.248v97.489a16.244,16.244,0,0,0,16.248,16.248H73.117v16.248H56.869v16.248h64.993V148.234H105.613V131.986h27.152V115.737H16.248V18.248H162.482V69.006H178.73V18.248A16.244,16.244,0,0,0,162.482,2ZM97.245,58.869,89.365,34.5l-7.88,24.372H56.869l20.067,14.3L69.3,96.808,89.365,82.185l20.067,14.623-7.637-23.641,20.067-14.3Z" transform="translate(0 14.248)"/>
+  </g>
+</svg>

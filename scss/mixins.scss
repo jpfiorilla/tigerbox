@@ -1,0 +1,308 @@
+/////////////////////////////////////////////////
+
+// breakpoint vars
+$large: 1200px;
+$medium: 840px;
+$small: 600px;
+$xsmall: 480px;
+
+////////////////////////////////////////////////
+///// Breakpoints. Stick with these. Any others are not allowed for this project.
+///// The timeline is too tight for any more modifications to this
+
+$large-over: 1201px;
+$large-under: (max-width $large);
+
+$medium-over: 841px;
+$medium-under: (max-width $medium);
+
+$small-over: $small;
+$small-under: (max-width: $small);
+
+$xsmall-over: 480px;
+$xsmall-under: (max-width $xsmall);
+
+/////////////////////////////////////////////////
+///////////// header vars ////
+$header_height_desktop: 70px;
+$header_height_small: 50px;
+
+//////////////////////////
+
+/////////////////////////////////////////////////
+///////////// colors ////
+$blue: #2673EC;
+$white: #ffffff;
+$black: #2d2e2e;
+$gold: #FFBF25;
+$grey: #F7F7F7;
+$lightBlue: #B9DCFF;
+$orange: #ec7322;
+$purple: #7826ec;
+$pink: #ff3a7f;
+
+$darkGrey: #2d2e2e;
+$lightGrey: #e3e3e3;
+$blueGrey: #a4b0bb;
+$linkBlue: #2593ff;
+$powderBlue: #b9dcff;
+$lightGreen: #EBF7D7;
+$lightYellow: #f7f5d7;
+$lightRed: #f7d7db;
+$textGrey: #4a4a4a;
+$red: #e3828e;
+$teal: #25ffd8;
+
+$cancelButton: #c0c0c0;
+
+$header_height_small: 50px;
+
+
+//////////////////////////
+
+/////////////////////////////////////////////////
+///////////// grid vars ////
+$large_side_padding: 50px;
+$small_side_padding: 20px;
+$desktop_padding: 5rem $large_side_padding;
+$mobile_padding: 2rem $small_side_padding;
+
+///////////// animation vars ////////////////////
+$revealTransition: .3s;
+
+//////////////////////////
+
+@mixin container($maxWidth) {
+	max-width:$maxWidth;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+@mixin listItem() {
+	display:list-item;
+	list-style-type:disc;
+	margin-left:20px;
+	padding-top:7px;
+}
+@mixin svgImage($width, $height) {
+	width: $width;
+	height: $height;
+	display:inline-block;
+}
+@mixin noAppearance() {
+   	-webkit-appearance: none;
+        -moz-appearance:none;
+    appearance:none;
+}
+@mixin placeholder() {
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  		color: $teal;
+  		text-transform:uppercase;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  	color: $teal;
+	  	text-transform:uppercase;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  	color: $teal;
+	  	text-transform:uppercase;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  	color: $teal;
+	  	text-transform:uppercase;
+	}
+}
+@mixin rotate($val) {
+	-webkit-transform: rotate($val);
+	-moz-transform: rotate($val);
+	-o-transform: rotate($val);
+	transform: rotate($val);
+}
+@mixin scale($val) {
+	-webkit-transform: scale($val);
+	-moz-transform: scale($val);
+	-o-transform: scale($val);
+	transform: scale($val);
+}
+@mixin transition($val) {
+	-webkit-transition: $val;
+	-moz-transition: $val;
+	-o-transition: $val;
+	transition: $val;
+}
+@mixin typeTransition($type, $val) {
+	-webkit-transition: $type $val;
+	-moz-transition: $type $val;
+	-o-transition: $type $val;
+	transition: $type $val;
+}
+@mixin translate($val, $y) {
+	-webkit-transform: translate($val, $y);
+    -moz-transform: translate($val, $y);
+    -ms-transform: translate($val, $y);
+    -o-transform: translate($val, $y);
+    transform: translate($val, $y);
+}
+@mixin transformOrigin($val) {
+	-webkit-transform-origin: $val;
+	-moz-transform-origin: $val;
+	-o-transform-origin: $val;
+	transform-origin: $val;
+}
+@mixin calculateWidth($percentage, $width) {
+	width: -webkit-calc(#{$percentage} - #{$width});
+	width:    -moz-calc(#{$percentage} - #{$width});
+	width:         calc(#{$percentage} - #{$width});
+}
+@mixin calculateHalfWidth($percentage, $width) {
+	width: -webkit-calc((#{$percentage} - #{$width}) / 2);
+	width:    -moz-calc((#{$percentage} - #{$width}) / 2);
+	width:         calc((#{$percentage} - #{$width}) / 2);
+}
+@mixin calculateHeight($percentage, $height) {
+	height: -webkit-calc(#{$percentage} - #{$height});
+	height:    -moz-calc(#{$percentage} - #{$height});
+	height:         calc(#{$percentage} - #{$height});
+	max-height: -webkit-calc(#{$percentage} - #{$height});
+	max-height:    -moz-calc(#{$percentage} - #{$height});
+	max-height:         calc(#{$percentage} - #{$height});
+}
+@mixin calculateLeftPosition($percentage, $width) {
+	left: -webkit-calc(#{$percentage} - #{$width});
+	left:    -moz-calc(#{$percentage} - #{$width});
+	left:         calc(#{$percentage} - #{$width});
+}
+@mixin calculateRightPosition($percentage, $width) {
+	right: -webkit-calc(#{$percentage} - #{$width});
+	right:    -moz-calc(#{$percentage} - #{$width});
+	right:         calc(#{$percentage} - #{$width});
+}
+@mixin calculateMarginLeftAddition($percentage, $width) {
+	margin-left: -webkit-calc(#{$percentage} + #{$width});
+	margin-left:    -moz-calc(#{$percentage} + #{$width});
+	margin-left:         calc(#{$percentage} + #{$width});
+}
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+@keyframes fadein {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+@keyframes cookieSlideup {
+	from { height: 0px; }
+	to { height: 50px; }
+}
+@keyframes spinOnce {
+    from { transform:rotate(60deg); }
+    to { transform:rotate(359deg); }
+}
+@mixin responsiveCircle($vw, $minWidth, $maxWidth) {
+	border-radius: 50%;
+	width: $vw;
+    height: $vw;
+    min-width: $minWidth;
+    min-height: $minWidth;
+    max-width: $maxWidth;
+    max-height: $maxWidth;
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $property}: $value;
+	}
+	// Output standard non-prefixed declaration
+	#{$property}: $value;
+}
+@mixin piecewise($prop, $smallSize, $largeSize, $pxMin, $pxMax, $i:null){
+    $smWidth: stripUnit($pxMin) * 1px;
+    $lgWidth: stripUnit($pxMax) * 1px;
+    @include breakpoint($lgWidth){
+        #{$prop}: $largeSize * 1px $i;
+    }
+    @include breakpoint(($smWidth $lgWidth)){
+        $small: stripUnit($smallSize);
+        $large: stripUnit($largeSize);
+        #{$prop}: calc(#{$smallSize * 1px} + (100vw - #{$pxMin * 1px})/#{($pxMax - $pxMin)/($largeSize - $smallSize)}) $i;
+    }
+    @include breakpoint((max-width $smWidth)){
+        #{$prop}: $smallSize * 1px $i;
+    }
+}
+@function stripUnit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+@mixin placeholder($color, $fontSize) {
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  	color: $color;
+	  	font-size:$fontSize;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  	color: $color;
+	  	font-size:$fontSize;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  	color: $color;
+	  	font-size:$fontSize;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  	color: $color;
+	  	font-size:$fontSize;
+	}
+}
+@mixin placeholderActive() {
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		display:none;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  	display:none;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  	display:none;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  	display:none;
+	}
+}
+
+@mixin noSelect(){
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+// sitewide
+$heroHeaderSize: 58px;
+$heroSubheaderSize: 23px;
+
+$sectionTitle: 48px;
+$sectionSubtitle: 23px;

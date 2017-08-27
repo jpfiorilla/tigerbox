@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-13594 206 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #95989a;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-Artboard_8);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #2593ff;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #ffbf25;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_417" data-name="Rectangle 417" class="cls-1" width="400" height="288.455" transform="translate(1118 3078)"/>
+    </clipPath>
+    <clipPath id="clip-Artboard_8">
+      <rect x="-13594" y="206" width="400" height="400"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_8" data-name="Artboard – 8" class="cls-2">
+    <g id="Mask_Group_60" data-name="Mask Group 60" class="cls-3" transform="translate(-14712 -2816.455)">
+      <g id="Symbol_117" data-name="Symbol 117" transform="translate(1117.692 3082.973)">
+        <circle id="Ellipse_74" data-name="Ellipse 74" class="cls-4" cx="137.123" cy="137.123" r="137.123" transform="translate(92.67)"/>
+        <g id="Symbol_116" data-name="Symbol 116" transform="translate(0 22.735)">
+          <g id="Symbol_115" data-name="Symbol 115" transform="translate(0)">
+            <g id="Walking" transform="translate(0 168.988)">
+              <path id="Path_459" data-name="Path 459" class="cls-5" d="M0,0H94.091V87.5H0Z"/>
+              <path id="Path_460" data-name="Path 460" class="cls-4" d="M35.4,16.083a7.6,7.6,0,0,0,7.841-7.291A7.6,7.6,0,0,0,35.4,1.5a7.6,7.6,0,0,0-7.841,7.291A7.6,7.6,0,0,0,35.4,16.083ZM20.9,28.478,9.92,79.881h8.233L25.21,50.716l8.233,7.291V79.881h7.841V52.539l-8.233-7.291L35.4,34.311a29.663,29.663,0,0,0,21.563,9.114V36.134c-7.449,0-13.722-3.646-16.858-8.75l-3.92-5.833a8.212,8.212,0,0,0-6.665-3.646c-1.176,0-1.96.365-3.136.365L6,26.29V43.425h7.841V31.03L20.9,28.478" transform="translate(17.523 3.968)"/>
+            </g>
+            <g id="Mountain" transform="translate(62.12)">
+              <path id="Path_461" data-name="Path 461" class="cls-5" d="M0,0H337.975V337.975H0Z"/>
+              <path id="Path_462" data-name="Path 462" class="cls-6" d="M184.07,6,131.261,76.411,171.4,129.924l-22.532,16.9c-23.8-31.685-63.37-84.494-63.37-84.494L1,174.988H310.811Z" transform="translate(13.082 78.494)"/>
+            </g>
+          </g>
+          <rect id="Rectangle_416" data-name="Rectangle 416" class="cls-6" width="58.259" height="95.204" transform="translate(176.315 189.977) rotate(-50)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
