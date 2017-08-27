@@ -30,17 +30,40 @@ export default class HomePage extends React.Component {
   }
   render() {
     let page = {
-      header: "Hompeage Header",
-      subheader: "Hompeage SubHeader"
-    }, homeImg = 'images/home/',
-      people = [
-        { name: 'David', situation: 'DEBT: $300,000 // DEGREE: MD', description: `David is deciding between working at a public hospital to qualify for Public Service Loan Forgiveness or at a private hospital to refinance his loans.` },
-        { name: 'Yvette', situation: 'DEBT: $80,000 // DEGREE: BA', description: `Yvette is joining the Peace Corps with an annual salary of $4,646 and is confused about how to lower her monthly loan payments while abroad.` },
-        { name: 'Alex', situation: 'DEBT: $65,000 // DEGREE: NONE', description: `Alex is struggling with loan payments after dropping out halfway through college to provide for younger siblings.` }
-      ]
+      hours: [{ days: `Mon Tue Wed Fri`, times: `10:00AM to 4:00PM` }, { days: `Thur Sun`, times: `10:00AM to 11:45PM` }]
+    };
     return (
       <div id="homepage">
-
+        <div id='header'>
+          <img src='images/tigerboxheader.jpg' />
+        </div>
+        <div className='content'>
+          <div className='infobox'>
+            <div className='addrPhone'>
+              <span>169 Park Ave. Brooklyn (btw Carlton and Adelphi)</span>
+              <span>646-320-1177</span>
+            </div>
+            <div className='hours'>
+              {
+                page.hours.map((hour, i) => <div className='row' key={i}>
+                  <div className='days'>{hour.days}</div>
+                  <div className='times'>{hour.times}</div>
+                </div>)
+              }
+            </div>
+            <div className='orderLinks'>
+              <a href="https://www.grubhub.com/restaurant/tiger-box-169-park-ave-brooklyn/349391?classicAffiliateId=%2Fr%2Fw%2F53631%2F&utm_source=content-cms.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=349391" target="__blank">
+                <img src='images/grubhub.png' />
+              </a>
+              <a href="" target="__blank">
+                <img src='images/seamless.png' />
+              </a>
+              <a href="https://www.doordash.com/store/tiger-box-brooklyn-70759/?utm_campaign=70759&utm_medium=website&utm_source=partner-link" target="__blank">
+                <img src='images/doordash.png' />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

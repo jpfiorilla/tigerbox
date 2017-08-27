@@ -1,397 +1,50 @@
 #homepage {
-	.hero {
-		padding-top: 80px;
-		min-height: 450px;
-		height: 75vh;
-		// background-color: $blueGrey;
-		background: #6FC4ED url("/images/home/homepage-hero.jpg") no-repeat fixed center;
-		background-size: cover;
-		background-position: center 20%;
-		margin-bottom: -80px;
-		.welcomeMat {
-			position: relative;
-			text-align: center;
-			margin: 75px auto 0;
-			max-width: 90%;
-			.welcome {
-				text-align: center;
-				color: $white;
-				font-size: 64px;
-				line-height: 1.4;
-				font-weight: bold;
-				// text-shadow: 1px 1px $blueGrey;
-				@include piecewise(font-size, 24, 48, 480, 1000);
+	max-width: 600px;
+	margin: auto;
+	.content {
+		.infobox {
+			background-color: black;
+			color: white;
+			padding: 20px;
+			.addrPhone {
+				display: flex;
+				justify-content: space-around;
 			}
-			button {
-				background-color: $gold;
-				color: $white;
-				font-size: 23px;
-				@include piecewise(font-size, 16, 23, 480, 1000);
-				padding: 12px 25px;
-				margin-top: 30px;
-				border: none;
-				font-weight: bold;
-				border-radius: 10px;
-				box-shadow: 2.4px 3.2px 3px 0px rgba(0, 0, 0, 0.1);
-				transition: 200ms ease;
-				&:hover {
-					transform: scale(1.03);
-				}
-			}
-		}
-	}
-	.homePane {
-		border-radius: 6px;
-		border: none;
-		-webkit-box-shadow: 0px 2px 2px rgb(100,100,100);
-		max-width: 1100px;
-		width: calc(90% - 40px);
-		.homePaneHeader {
-			margin: auto;
-			text-align: center;
-			margin-top: 35px;
-			.homepageContent {
-				padding: 2rem 0;
-			}
-			.clearPath {
-				font-size: 36px;
-				@include piecewise(font-size, 22, 36, 480, 1000);
-				font-weight: bold;
-				line-height: 1.25;
-			}
-			.clearPathSubtitle, .howItWorks {
-				font-size: 24px;
-				@include piecewise(font-size, 16, 24, 480, 1000);
-				color: $darkGrey;
-				line-height: 1.5;
-			}
-			.clearPathSubtitle {
-				margin-top: 45px;
-				@include piecewise(margin-top, 20, 45, 480, 1000);
-			}
-		}
-	}
-	.paneInner {
-		display: flex;
-		margin: 100px auto;
-		@include piecewise(margin-top, 50, 100, 480, 1000);
-		@include piecewise(margin-bottom, 50, 100, 480, 1000);
-		max-width: 85%;
-		p {
-			font-size: 26px;
-			@include piecewise(font-size, 14, 26, 480, 1000);
-			line-height: 1.78;
-			text-align: center;
-			margin: auto;
-		}
-	}
-	.smartToolsPane {
-		.paneInner {
-			margin: 100px auto;
-			@include piecewise(margin-top, 50, 130, 480, 1000);
-			@include piecewise(margin-bottom, 50, 130, 480, 1000);
-			.left {
-				@include span(5 of 12);
-				position: relative;
-				img, svg {
-					max-width: 430px;
-					@include piecewise(height, 80, 200, 480, 1000);
-					position: absolute;
-					top: 50%;
-					@include piecewise(margin-top, -40, -100, 480, 1000);
-				}
-			}
-			.right {
-				@include span(7 of 12);
-				@include omega();
-				p {
-					float: right;
-					max-width: 475px;
-					// margin-top: 80px;
-					// @include piecewise(margin-top, 0, 80, 480, 1000);
-				}
-			}
-		}
-	}
-	.nationalProblemPane {
-		.paneInner {
-			margin: 80px auto 60px;
-			@include piecewise(margin-top, 50, 80, 480, 1000);
-			@include piecewise(margin-bottom, 50, 60, 480, 1000);
-			.left {
-				@include span(7 of 12);
-				text-align: center;
-				p {
-					max-width: 540px;
-				}
-				button {
-					background-color: $gold;
-					margin-top: 40px;
-					@include piecewise(margin-top, 20, 40, 480, 1000);
-					box-shadow: 2.4px 3.2px 3px 0px rgba(0, 0, 0, 0.07);
-					padding: 20px 45px;
-					@include piecewise(padding-top, 10, 20, 480, 1000);
-					@include piecewise(padding-bottom, 10, 20, 480, 1000);
-					@include piecewise(padding-left, 25, 45, 480, 1000);
-					@include piecewise(padding-right, 25, 45, 480, 1000);
-					font-size: 22px;
-					@include piecewise(font-size, 14, 22, 480, 1000);
-				}
-			}
-			.right {
-				@include span(5 of 12);
-				@include omega();
-				img, svg {
-					max-width: 360px;
-					@include piecewise(height, 140, 300, 480, 1000);
-					position: relative;
-					top: -20px;
-					@include piecewise(top, 0, -20, 480, 1000);
-				}
-			}
-		}
-	}
-	.willPane {
-		.paneInner {
-			margin: 120px auto 90px;
-			max-width: 87%;
-			@include piecewise(margin-top, 60, 100, 480, 1000);
-			@include piecewise(margin-bottom, 50, 90, 480, 1000);
-			.left {
-				@include span(5 of 12);
-				position: relative;
-				img, svg {
-					max-width: 370px;
-					height: auto;
-					width: 100%;
-					@include piecewise(height, 130, 330, 480, 1000);
-					position: absolute;
-					top: 50%;
-					@include piecewise(margin-top, -65, -185, 480, 1000);
-				}
-			}
-			.right {
-				@include span(7 of 12);
-				@include omega();
-				text-align: center;
-				p {
-					max-width: 550px;
-				}
-				button {
-					background-color: $gold;
-					margin-top: 40px;
-					@include piecewise(margin-top, 20, 40, 480, 1000);
-					box-shadow: 2.4px 3.2px 3px 0px rgba(0, 0, 0, 0.07);
-					padding: 20px;
-					@include piecewise(padding-top, 10, 20, 480, 1000);
-					@include piecewise(padding-bottom, 10, 20, 480, 1000);
-					@include piecewise(padding-left, 15, 20, 480, 1000);
-					@include piecewise(padding-right, 15, 20, 480, 1000);
-					font-size: 22px;
-					@include piecewise(font-size, 14, 22, 480, 1000);
-				}
-			}
-		}
-	}
-	.uniqueSituationPane {
-		.paneInner {
-			margin: 50px auto;
-			// @include piecewise(margin-top)
-			// @include piecewise(margin-bottom, 20, 50, 480, 1000);
-			max-width: 90%;
-			padding: 0;
-			.personColumn {
-				font-size: 21px;
-				@include piecewise(font-size, 14, 21, 480, 1000);
-				text-align: center;
-				margin: 0 15px;
-				flex: 1;
-				>div:first-child {
-					max-width: 300px;
-					margin: auto;
-					// @include piecewise(width, 150, 300, 480, 1000);
-					@include piecewise(max-width, 130, 250, 600, 1000);
-					>div {
-						max-width: 300px;
-						svg {
-							max-width: 300px;
-							width: 100%;
-							height: auto;
-						}
+			.hours {
+				max-width: 400px;
+				margin: 20px auto;
+				.row {
+					.days {
+						@include span(6 of 12);
 					}
-				}
-				.name {
-					font-size: 35px;
-					@include piecewise(font-size, 18, 35, 480, 1000);
-					font-weight: bold;
-				}				
-				.situation, .description {
-					line-height: 1.4;
-				}
-				.situation {
-					letter-spacing: 0.3px;
-					margin: 15px auto;
-					@include piecewise(margin-top, 10, 15, 480, 1000);
-					@include piecewise(margin-bottom, 10, 15, 480, 1000);
-				}
-				.description {
-					letter-spacing: 0.5px;
-				}
-			}
-			@include breakpoint((max-width 550px)){
-				display: block;
-				.personColumn {
-					margin: 10px auto;
-				}
-			}
-		}
-	}
-	.videoPane {
-		.paneInner {
-			max-width: 900px;
-			display: block;
-			text-align: center;
-			margin: 80px auto 60px;
-			@include piecewise(margin-top, 50, 80, 480, 1000);
-			@include piecewise(margin-bottom, 20, 60, 480, 1000);
-			.scrollingUp {
-				font-size: 32px;
-				@include piecewise(font-size, 16, 32, 480, 1000);
-				letter-spacing: 0.5px;
-				margin-top: 50px;
-				@include piecewise(margin-top, 30, 50, 480, 1000);
-				line-height: 1.25;
-			}
-			button {
-				font-size: 21px;
-				@include piecewise(font-size, 14, 21, 480, 1000);
-				padding: 20px 28px;
-				@include piecewise(padding-top, 10, 20, 480, 1000);
-				@include piecewise(padding-bottom, 10, 20, 480, 1000);
-				@include piecewise(padding-left, 15, 28, 480, 1000);
-				@include piecewise(padding-right, 15, 28, 480, 1000);
-				box-shadow: 2.4px 3.2px 3px 0px rgba(0, 0, 0, 0.07);
-				background-color: $gold;
-				margin-top: 40px;
-				@include piecewise(margin-top, 20, 40, 480, 1000);
-				transition: transform 150ms ease;
-				&:hover {
-					transform: scale(1.02);
-				}
-			}
-		}
-	}
-
-
-	.flexboxContainer {
-		display: flex;
-		flex-direction: row;
-		padding: 2rem 0;
-		margin: 0 auto;
-		justify-content: center;
-		&.howItWorksColumns {
-			max-width: 1000px;
-			margin-bottom: 80px;
-			@include piecewise(margin-bottom, 0, 80, 480, 1000);
-			.threeColumnEven {
-				padding: 0 15px;
-			}
-		}
-		.threeColumnEven {
-			display: flex;
-			flex-direction: column;
-			flex-basis: 33%;
-			align-items: center;
-			img {
-				height: 115px;
-				@include piecewise(height, 70, 115, 480, 1000);
-			}
-			>div:not(.imageSubtext){
-				// height: 115px;
-				>div {
-					height: 115px;
-					svg {
-						height: 115px;
-						width: auto;
+					.times {
+						@include span(6 of 12);
+						@include omega();
 					}
 				}
 			}
-			.uploadLoansSvg {
-				position: relative;
-				left: 20px;
-				@include piecewise(left, 10, 20, 480, 1000);
+			.orderLinks {
+				width: 600px;
+				display: flex;
+				justify-content: space-around;
+				margin: auto;
+				align-items: center;
+				overflow: hidden;
+				height: 35px;
+				a {
+					flex-basis: 25%;
+					text-align: center;
+					&:nth-child(2){
+						flex-basis: 18%;
+					}
+					&:hover {
+						transform: scale(1.05);
+					}
+					img {
+						width: 80%;
+					}
+				}
 			}
-		}
-		.imageSubtext {
-			text-align: center;
-			font-size: 21px;
-			@include piecewise(font-size, 14, 21, 480, 1000);
-			margin-top: 32px;
-			@include piecewise(margin-top, 15, 32, 480, 1000);
-			max-width: 190px;
-			line-height: 1.37;
-		}
-		.homepageIcon {
-			display: flex;
-			flex-direction: column;
-			flex-basis: 50%;
-			align-items: center;
-			justify-content: center;
-		}
-		.textContent {
-			float: right;
-			width: 60%;
-			margin-right: 3rem;
-			margin-left: 3rem;
-		}
-		.homepageInformationText {
-			display: flex;
-			flex-direction: column;
-			flex-basis: 50%;
-			align-items: center;
-			justify-content: center;
-		}
-		.informationTextStyle {
-			width: 60%;
-			text-align: center;
-			line-height: 2rem;
-			font-size: 20px;
-		}
-		.homepagePersonImage {
-			border-radius: 100%;
-			height: 150px;
-			width: 150px;
-		}
-		.oneColumnCentered {
-			display: flex;
-			flex-direction: column;
-			flex-basis: 100%;
-			align-items: center;
-		}
-		.conclusionText {
-			font-size: 22px;
-			width: 40%;
-			line-height: 2rem;
-			margin-bottom: 1rem;
-		}
-		.withBorder {
-			border-right: 2px solid $gold;
-			border-left: 2px solid $gold;
-		}
-		.navLink{
-			color: $blue;
-			padding: 1rem 0;
-		}
-		button {
-			background-color: $blue;
-			color: $white;
-			font-size: 14px;
-			font-weight: bold;
-			padding: 10px 20px;
-			margin-top: 1.5rem;
-			border: none;
-			width: 125px;
-			border-radius: 4px;
 		}
 	}
 }
