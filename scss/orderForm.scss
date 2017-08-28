@@ -1,0 +1,29 @@
+#orderForm {
+	padding: 20px;
+    @include piecewise(padding-left, 10, 20, 400, 800);
+    @include piecewise(padding-right, 10, 20, 400, 800);
+    text-align: center;
+    .section {
+        .sectionTitle {
+
+        }
+        .menuItem {
+            text-align: left;
+            .itemTop {
+                // display: flex;
+                .num {
+                    display: inline-block;
+                }
+                .name {
+                    display: inline-block;
+                }
+                .price {
+                    display: inline-block;
+                }
+            }
+            .description {
+
+            }
+        }
+    }
+}

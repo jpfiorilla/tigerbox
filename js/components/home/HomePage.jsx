@@ -3,11 +3,7 @@ import { render } from 'react-dom';
 import { Link } from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import UploadLoans from '../ui/svgs/UploadLoans.jsx';
-import ViewDashboard from '../ui/svgs/ViewDashboard.jsx';
-import Recommendation from '../ui/svgs/Recommendation.jsx';
-import Mountain from '../ui/svgs/Mountain.jsx';
-import ReactSVG from 'react-svg';
+import OrderForm from './OrderForm';
 // import ScrollMagic from 'scrollmagic';
 // import gsap from 'gsap';
 
@@ -55,7 +51,7 @@ export default class HomePage extends React.Component {
               <a href="https://www.grubhub.com/restaurant/tiger-box-169-park-ave-brooklyn/349391?classicAffiliateId=%2Fr%2Fw%2F53631%2F&utm_source=content-cms.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=349391" target="__blank">
                 <img src='images/grubhub.png' />
               </a>
-              <a href="" target="__blank">
+              <a href="https://www.seamless.com/menu/tiger-box-169-park-ave-brooklyn/349391" target="__blank">
                 <img src='images/seamless.png' />
               </a>
               <a href="https://www.doordash.com/store/tiger-box-brooklyn-70759/?utm_campaign=70759&utm_medium=website&utm_source=partner-link" target="__blank">
@@ -64,6 +60,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </div>
+        <OrderForm />
       </div>
     );
   }

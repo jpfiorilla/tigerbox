@@ -72,7 +72,7 @@ class App extends React.Component {
 
   render() {
     return (
-        <div className={"yield browser-" + browser() + " is-mobile-" + globals.isMobile + " is-ios-" + globals.isIos} style={{ overflowX: 'hidden' }}>
+        <div className={"yield browser-" + browser() + " is-mobile-" + globals.isMobile + " is-ios-" + globals.isIos} style={{ overflow: 'hidden' }}>
           <IdleTimer
             ref="idleTimer"
             element={document}

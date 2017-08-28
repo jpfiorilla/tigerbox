@@ -1,74 +1,6 @@
-/////////////////////////////////////////////////
-
-// breakpoint vars
-$large: 1200px;
-$medium: 840px;
-$small: 600px;
-$xsmall: 480px;
-
-////////////////////////////////////////////////
-///// Breakpoints. Stick with these. Any others are not allowed for this project.
-///// The timeline is too tight for any more modifications to this
-
-$large-over: 1201px;
-$large-under: (max-width $large);
-
-$medium-over: 841px;
-$medium-under: (max-width $medium);
-
-$small-over: $small;
-$small-under: (max-width: $small);
-
-$xsmall-over: 480px;
-$xsmall-under: (max-width $xsmall);
-
-/////////////////////////////////////////////////
-///////////// header vars ////
-$header_height_desktop: 70px;
-$header_height_small: 50px;
-
-//////////////////////////
-
-/////////////////////////////////////////////////
-///////////// colors ////
-$blue: #2673EC;
 $white: #ffffff;
 $black: #2d2e2e;
-$gold: #FFBF25;
-$grey: #F7F7F7;
-$lightBlue: #B9DCFF;
-$orange: #ec7322;
-$purple: #7826ec;
-$pink: #ff3a7f;
-
-$darkGrey: #2d2e2e;
-$lightGrey: #e3e3e3;
-$blueGrey: #a4b0bb;
-$linkBlue: #2593ff;
-$powderBlue: #b9dcff;
-$lightGreen: #EBF7D7;
-$lightYellow: #f7f5d7;
-$lightRed: #f7d7db;
-$textGrey: #4a4a4a;
-$red: #e3828e;
-$teal: #25ffd8;
-
-$cancelButton: #c0c0c0;
-
-$header_height_small: 50px;
-
-
-//////////////////////////
-
-/////////////////////////////////////////////////
-///////////// grid vars ////
-$large_side_padding: 50px;
-$small_side_padding: 20px;
-$desktop_padding: 5rem $large_side_padding;
-$mobile_padding: 2rem $small_side_padding;
-
-///////////// animation vars ////////////////////
-$revealTransition: .3s;
+$tan: #FBF4E0;
 
 //////////////////////////
 
@@ -77,7 +9,6 @@ $revealTransition: .3s;
 	margin-left:auto;
 	margin-right:auto;
 }
-
 
 @mixin listItem() {
 	display:list-item;
