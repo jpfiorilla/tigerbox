@@ -32,7 +32,6 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.26.1",
     "currency-formatter": "^1.2.1",
-    "dotenv": "^4.0.0",
     "eslint": "^3.14.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.9.0",

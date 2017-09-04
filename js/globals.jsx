@@ -13,7 +13,7 @@ const slugify = function(text){
       .replace(/-+$/, '');            // Trim - from end of text
 }
 
-const titleAppend = ' | Simplifi';
+const titleAppend = ' | TigerBox';
 
 const removeHash = function(){
     history.pushState("", document.title, window.location.pathname + window.location.search);

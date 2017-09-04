@@ -4,8 +4,6 @@ import { Link } from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import OrderForm from './OrderForm';
-// import ScrollMagic from 'scrollmagic';
-// import gsap from 'gsap';
 
 export default class HomePage extends React.Component {
   constructor(props){
@@ -15,14 +13,6 @@ export default class HomePage extends React.Component {
   componentDidMount(){
     window.scrollTo(0, 0);
     document.title = 'Home' + globals.titleAppend;
-
-    // this.controller = new ScrollMagic.Controller();
-    // this.heroTween = TweenLite.from('.hero', 1, { backgroundPosition: 'center 0%', ease:Power0.easeNone }).to('.hero', 1, { backgroundPosition: 'center 20%' })
-    // this.heroTween = TweenLite.to('.hero', 1, { backgroundPosition: 'center 20%' })
-    // this.heroTween = TweenLite.from('.hero', 1, { y: '-50%' })
-    // this.heroTimeline = new ScrollMagic.Scene({ triggerElement: '.hero', triggerHook: 1 })
-    //                                     .setTween(this.heroTween)
-    //                                     .addTo(this.controller);
   }
   render() {
     let page = {
@@ -61,6 +51,10 @@ export default class HomePage extends React.Component {
           </div>
         </div>
         <OrderForm />
+        <div className='footer'>
+          <div className='left'>© 2016 Tiger Box. All rights reserved.</div>
+          <div className='right'>169 Park Ave Brooklyn NY 11205 646-320-1177</div>
+        </div>
       </div>
     );
   }

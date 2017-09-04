@@ -3,27 +3,74 @@
     @include piecewise(padding-left, 10, 20, 400, 800);
     @include piecewise(padding-right, 10, 20, 400, 800);
     text-align: center;
+    max-width: 600px;
+    margin: auto;
     .section {
+        padding: 20px 0;
         .sectionTitle {
-
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: $green;
         }
         .menuItem {
             text-align: left;
+            margin: 12px 0;
+            @include noSelect();
             .itemTop {
                 // display: flex;
+                font-weight: bold;
+                position: relative;
+                margin-bottom: 5px;
                 .num {
                     display: inline-block;
+                    margin-right: 5px;
                 }
                 .name {
                     display: inline-block;
+                    transition: color 200ms ease;
+                    &:hover {
+                        color: $lightGreen;
+                    }
                 }
                 .price {
                     display: inline-block;
+                    position: absolute;
+                    right: 0;
                 }
             }
             .itemBot {
+                display: flex;
+                justify-content: space-between;
                 .description {
-
+                    font-size: 14px;
+                    line-height: 1.25;
+                    @include yesSelect();
+                    flex-basis: 85%;
+                    opacity: 0.8;
+                }
+                .quantityOuter {
+                    display: flex;
+                    align-items: center;
+                    .subtract, .add {
+                        color: $black;
+                        cursor: pointer;
+                        transition: color 200ms ease;
+                        &:hover {
+                            color: $lightGreen;
+                        }
+                    }
+                    input {
+                        border-radius: 5px;
+                        border: 1px solid $white;
+                        transition: border 200ms ease;
+                        width: 25px;
+                        text-align: center;
+                        margin: 0 5px;
+                        &:focus, &:hover {
+                            border: 1px solid $lightGreen;
+                        }
+                    }
                 }
             }
         }
