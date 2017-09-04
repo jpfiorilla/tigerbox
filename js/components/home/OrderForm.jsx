@@ -13,9 +13,12 @@ export default class HomePage extends React.Component {
     super(props);
     this.state = { };
   }
-  handleChange = (name, e) => {
-    if (typeof(e) !== 'number') e = e.target.value;
-    if (e > -1) this.setState({ [name]: e })
+  handleChange = (name, num) => {
+    console.log(name, num)
+    // let { target }
+    // e = e.target.value || e;
+    // if (typeof(e) !== 'number') e = e.target.value;
+    if (num > -1) this.setState({ [name]: Number(num) });
   }
   render() {
     this.totalItem = 0;
@@ -39,8 +42,8 @@ export default class HomePage extends React.Component {
                     <div className='description'>{item.description}</div>
                     <div className='quantityOuter'>
                       <div className='subtract' onClick={() => this.handleChange(item.name, (this.state[item.name] - 1))}>-</div>
-                      <input type='text' value={this.state[item.name] || ''} onChange={this.handleChange.bind(this, item.name)} placeholder='0' />
-                      <div className='add' onClick={() => this.handleChange(item.name, (this.state[item.name] || 0 + 1))}>+</div>
+                      <input type='text' value={this.state[item.name] || ''} onChange={(e) => this.handleChange(item.name, e.target.value)} placeholder='0' />
+                      <div className='add' onClick={() => this.handleChange(item.name, (this.state[item.name] || 0) + 1)}>+</div>
                     </div>
                   </div>
                 </div>)})
