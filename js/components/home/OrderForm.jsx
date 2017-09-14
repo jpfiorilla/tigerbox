@@ -14,7 +14,9 @@ class OrderForm extends React.Component {
   }
   handleChange = (name, num) => {
     if (num > -1) this.setState({ [name]: Number(num) });
-    if (num > -1) this.props.actions.cartSet({...this.state, [name]: Number(num)});
+    let state = {...this.state, [name]: Number(num)};
+    for (var meal in state) if (state[meal] == 0) delete state[meal];
+    if (num > -1) this.props.actions.cartSet(state);
   }
   render() {
     this.totalItem = 0;
