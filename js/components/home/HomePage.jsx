@@ -4,6 +4,11 @@ import { Link } from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import OrderForm from './OrderForm';
+import Cart from './Cart';
+
+const page = {
+    hours: [{ days: `Mon Tue Wed Fri`, times: `10:00AM to 4:00PM` }, { days: `Thur Sun`, times: `10:00AM to 11:45PM` }]
+};
 
 export default class HomePage extends React.Component {
   constructor(props){
@@ -15,11 +20,9 @@ export default class HomePage extends React.Component {
     document.title = 'Home' + globals.titleAppend;
   }
   render() {
-    let page = {
-      hours: [{ days: `Mon Tue Wed Fri`, times: `10:00AM to 4:00PM` }, { days: `Thur Sun`, times: `10:00AM to 11:45PM` }]
-    };
     return (
       <div id="homepage">
+        <Cart />
         <div id='header'>
           <img src='images/tigerboxheader.jpg' />
         </div>

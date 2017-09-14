@@ -20,7 +20,7 @@ class OrderForm extends React.Component {
   }
   render() {
     this.totalItem = 0;
-    console.log(this.props.cart);
+    // console.log(this.props.cart);
     return (
       <div id="orderForm">
         <form>

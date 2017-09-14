@@ -1,0 +1,44 @@
+#cart {
+    position: fixed;
+    background-color: $white;
+    right: 100px;
+    top: -5px;
+    padding: 15px;
+    border: 2px solid $orange;
+    border-radius: 5px;
+    display: inline-block;
+    z-index: 9999;
+    .meals {
+        display: block;
+        .cartEntry {
+            border-bottom: 1px solid $lightGreen;
+            padding: 10px;
+            // display: flex;
+            // align-content: baseline;
+            @include noSelect();
+            &:last-child {
+                border-bottom: none;
+            }
+            >div {
+                display: inline-block;
+            }
+            .index {
+                font-size: 14px;
+                color: grey;
+                margin-right: 5px;
+            }
+            .mealName {
+                min-width: 240px;
+            }
+            .quantity {
+
+            }
+            .mealPrice {
+
+            }
+            .mealSubtotal {
+
+            }
+        }
+    }
+}

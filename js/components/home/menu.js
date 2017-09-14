@@ -2,7 +2,7 @@ const appetizers = {
   name: 'APPETIZERS',
   items: [
     { name: `Spicy Pork Ssam`, price: 8, description: `Three wraps of grilled pork with Boston lettuce, gochujang, jalapeño, garlic, cilantro` },
-    { name: `Seafood Scallion Pancake`, price: 12, description: `Pan-fried patties of shrimp, clams & squid in special batter; soy dipping sauce` },
+    // { name: `Seafood Scallion Pancake`, price: 12, description: `Pan-fried patties of shrimp, clams & squid in special batter; soy dipping sauce` },
     { name: `Tofu Veggie Fritters`, price: 6, description: `Pan-fried patties of crushed tofu, spinach, carrot, onion, soy dipping sauce`, v: true },
     { name: `Tofu Chicken Fritters`, price: 6, description: `Pan-fried patties of crushed tofu, chicken, carrot, onion, soy dipping sauce` },
     { name: `Kimchi Fritters`, price: 6, description: `Pan-fried patties of Kimchi with special batter, soy dipping sauce`, v: true },
