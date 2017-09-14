@@ -5,24 +5,20 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import menu from './menu';
 import { format } from 'currency-formatter';
-// import ScrollMagic from 'scrollmagic';
-// import gsap from 'gsap';
+import * as actions from '../../actions/cartActions';
 
-export default class HomePage extends React.Component {
+class OrderForm extends React.Component {
   constructor(props){
     super(props);
-    this.state = { };
+    this.state = {};
   }
   handleChange = (name, num) => {
-    console.log(name, num)
-    // let { target }
-    // e = e.target.value || e;
-    // if (typeof(e) !== 'number') e = e.target.value;
     if (num > -1) this.setState({ [name]: Number(num) });
+    if (num > -1) this.props.actions.cartSet({...this.state, [name]: Number(num)});
   }
   render() {
     this.totalItem = 0;
-    console.log(this.state)
+    console.log(this.props.cart);
     return (
       <div id="orderForm">
         <form>
@@ -55,3 +51,15 @@ export default class HomePage extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state, ownProps) {
+	return { cart: state.cart }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OrderForm);
