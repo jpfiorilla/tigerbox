@@ -7,6 +7,8 @@ import menu from './menu';
 import { format } from 'currency-formatter';
 import * as actions from '../../actions/cartActions';
 import flatten from 'lodash.flatten';
+import CartWidget from './CartWidget';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 let menuItems = [];
 menu.forEach(category => category.items.forEach(item => menuItems.push(item)))
@@ -16,28 +18,40 @@ class Cart extends React.Component {
     super(props);
     this.state = {};
   }
-  mealPrice = (meal) => {
-    console.log(meal, menuItems.filter((item) => item.mealName == meal.mealName));
-    return meal.quantity * menuItems.filter((item) => item.name == meal.mealName).price;
-  }
   render() {
-    let cart = [];
-    for (var mealName in this.props.cart) cart.push({ mealName, quantity: this.props.cart[mealName] });
+    let cart = [], subtotal = 0;
+    for (var mealName in this.props.cart){
+      cart.push({ mealName, quantity: this.props.cart[mealName] });
+      subtotal += this.props.cart[mealName] * menuItems.filter(item => item.name == mealName)[0].price;
+    }
     return (
       <div id="cart">
         <div className='meals'>
-          {
-            cart.map((meal, i) => 
-              <div className='cartEntry' key={i}>
-                <div className='index'>{(i+1) + '.'}</div>
-                <div className='mealName'>{meal.mealName}</div>
-                <div className='quantity'>{meal.quantity}</div>
-                <div className='mealPrice'>{() => this.mealPrice.bind(this, meal)}</div>
-                <div className='mealSubtotal'></div>
-              </div>
-            )
-          }
+          <CSSTransitionGroup transitionName='cartItem' transitionEnterTimeout={150} transitionLeaveTimeout={150}>
+            {
+              cart.map((meal, i) => {
+                let price = menuItems.filter(item => item.name == meal.mealName)[0].price;
+                let mealSubtotal = price * cart[i].quantity;
+                return (
+                  <div className='cartEntry' key={i}>
+                    <div className='index'>{(i+1) + '.'}</div>
+                    <div className='mealName'>{meal.mealName}</div>
+                    <CartWidget name={meal.mealName} />
+                    <div className='mealPrice'>
+                      <span className='x'>x</span>
+                      <span className='price'>{format(price, { code: 'USD' })}</span>
+                    </div>
+                    <div className='mealSubtotal'>
+                      <span className='equals'>=</span>
+                      <span className='price'>{format(mealSubtotal, { code: 'USD' })}</span>
+                    </div>
+                  </div>
+                )}
+              )
+            }
+          </CSSTransitionGroup>
         </div>
+        { subtotal > 0 && <div className='subtotal'>{format(subtotal, { code: 'USD' })}</div> }
       </div>
     );
   }

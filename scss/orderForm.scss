@@ -63,42 +63,42 @@
                     opacity: 0.8;
                     letter-spacing: 0.3px;
                 }
-                .quantityOuter {
-                    display: flex;
-                    align-items: center;
-                    .subtract, .add {
-                        color: $white;
-                        font-weight: bold;
-                        cursor: pointer;
-                        width: 20px;
-                        height: 20px;
-                        text-align: center;
-                        box-shadow: 0 1px 1px grey;
-                        background-color: $orange;
-                        border-radius: 20px;
-                        transition: 150ms ease;
-                        &:hover {
-                            // color: $lightGreen;
-                            transform: scale(1.1);
-                        }
-                    }
-                    input {
-                        border-radius: 5px;
-                        border: 1px solid $lightGreen;
-                        font-family: 'Open Sans', sans-serif;
-                        transition: border 200ms ease;
-                        width: 25px;
-                        font-size: 16px;
-                        padding: 1px;
-                        box-shadow: 0 1px 1px grey;
-                        text-align: center;
-                        margin: 0 5px;
-                        &:focus, &:hover {
-                            border: 1px solid $lightGreen;
-                        }
-                    }
-                }
             }
+        }
+    }
+}
+.quantityOuter {
+    display: flex;
+    align-items: center;
+    .subtract, .add {
+        color: $white;
+        font-weight: bold;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        box-shadow: 0 1px 1px grey;
+        background-color: $orange;
+        border-radius: 20px;
+        transition: 150ms ease;
+        &:hover {
+            // color: $lightGreen;
+            transform: scale(1.1);
+        }
+    }
+    input {
+        border-radius: 5px;
+        border: 1px solid $lightGreen;
+        font-family: 'Open Sans', sans-serif;
+        transition: border 200ms ease;
+        width: 25px;
+        font-size: 16px;
+        padding: 1px;
+        box-shadow: 0 1px 1px grey;
+        text-align: center;
+        margin: 0 5px;
+        &:focus, &:hover {
+            border: 1px solid $lightGreen;
         }
     }
 }

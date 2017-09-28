@@ -5,12 +5,13 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import OrderForm from './OrderForm';
 import Cart from './Cart';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 const page = {
     hours: [{ days: `Mon Tue Wed Fri`, times: `10:00AM to 4:00PM` }, { days: `Thur Sun`, times: `10:00AM to 11:45PM` }]
 };
 
-export default class HomePage extends React.Component {
+class HomePage extends React.Component {
   constructor(props){
     super(props);
     this.state = { };
@@ -22,7 +23,9 @@ export default class HomePage extends React.Component {
   render() {
     return (
       <div id="homepage">
-        <Cart />
+        <CSSTransitionGroup transitionName='cart' transitionEnterTimeout={150} transitionLeaveTimeout={150}>
+          { Object.keys(this.props.cart || {}).length && <Cart /> }
+        </CSSTransitionGroup>
         <div id='header'>
           <img src='images/tigerboxheader.jpg' />
         </div>
@@ -62,3 +65,7 @@ export default class HomePage extends React.Component {
     );
   }
 }
+
+const mapStateToProps = ({ cart }) => ({ cart });
+
+export default connect(mapStateToProps, null)(HomePage);
