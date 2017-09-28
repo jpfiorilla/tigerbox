@@ -20,6 +20,11 @@
             padding: 8px 16px;
             box-shadow: 0 2px 4px grey;
             @include noSelect();
+            transition: 150ms ease;
+            &:hover {
+                transform: translateY(-2px) translateX(-2px);
+                box-shadow: 0 3px 6px grey;
+            }
             .itemTop {
                 // display: flex;
                 font-weight: bold;
@@ -33,6 +38,7 @@
                 .name {
                     display: inline-block;
                     transition: color 200ms ease;
+                    letter-spacing: 0.5px;
                     &:hover {
                         color: $lightGreen;
                     }
@@ -52,7 +58,7 @@
                 .description {
                     font-size: 14px;
                     line-height: 1.25;
-                    @include yesSelect();
+                    // @include yesSelect();
                     flex-basis: 85%;
                     opacity: 0.8;
                     letter-spacing: 0.3px;

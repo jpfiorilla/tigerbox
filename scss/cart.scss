@@ -1,6 +1,6 @@
 #cart {
     position: fixed;
-    background-color: $white;
+    background-color: $tan;
     right: 100px;
     top: -5px;
     padding: 15px;
@@ -8,6 +8,7 @@
     border-radius: 5px;
     display: inline-block;
     z-index: 9999;
+    box-shadow: 0 0 2px grey;
     .meals {
         display: block;
         .cartEntry {

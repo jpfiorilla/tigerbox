@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import menu from './menu';
 import { format } from 'currency-formatter';
 import * as actions from '../../actions/cartActions';
+import CartWidget from './CartWidget';
 
 class OrderForm extends React.Component {
   constructor(props){
@@ -38,11 +39,12 @@ class OrderForm extends React.Component {
                   </div>
                   <div className='itemBot'>
                     <div className='description'>{item.description}</div>
-                    <div className='quantityOuter'>
+                    {/*<div className='quantityOuter'>
                       <div className='subtract' onClick={() => this.handleChange(item.name, (this.state[item.name] - 1))}>-</div>
                       <input type='text' value={this.state[item.name] || ''} onChange={(e) => this.handleChange(item.name, e.target.value)} placeholder='0' />
                       <div className='add' onClick={() => this.handleChange(item.name, (this.state[item.name] || 0) + 1)}>+</div>
-                    </div>
+                    </div>*/}
+                    <CartWidget name={item.name} />
                   </div>
                 </div>)})
               }
