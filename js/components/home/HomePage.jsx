@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import OrderForm from './OrderForm';
 import Cart from './Cart';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-import { Header } from '../ui';
+import { Header, Footer } from '../ui';
 
 const page = {
     hours: [{ days: `Mon Tue Wed Fri`, times: `10:00AM to 4:00PM` }, { days: `Thur Sun`, times: `10:00AM to 11:45PM` }]
@@ -56,10 +56,7 @@ class HomePage extends React.Component {
           </div>
         </div>
         <OrderForm />
-        <div className='footer'>
-          <div className='left'>© 2016 Tiger Box. All rights reserved.</div>
-          <div className='right'>169 Park Ave Brooklyn NY 11205 646-320-1177</div>
-        </div>
+        <Footer />
       </div>
     );
   }

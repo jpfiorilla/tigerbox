@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Link } from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { Header, Footer } from '../ui';
 
 export default class Gallery extends React.Component {
   constructor(props){
@@ -16,13 +17,36 @@ export default class Gallery extends React.Component {
   render() {
     return (
       <div id="gallery">
-        <div id='header'>
-          <img src='images/tigerboxheader.jpg' />
+        <Header />
+        <div className='photos'>
+          {
+            photos.map(photo => <div className='photo'>
+              <div className='subtitle'>{photo.subtitle}</div>
+              <img src={'images/' + photo.img} />
+            </div>)
+          }
         </div>
-        <div className='cateringTop'>
-          
-        </div>
+        <Footer />
       </div>
     );
   }
 }
+
+const photos = [
+  {
+    subtitle: 'Mandoo Making Day',
+    img: ''
+  },
+  {
+    subtitle: 'Bulgogi (Box or Bowl)',
+    img: ''
+  },
+  {
+    subtitle: 'Spicy Pork Ssam (Appetizer)',
+    img: ''
+  },
+  {
+    subtitle: 'Steamed Mandoo',
+    img: ''
+  }
+]

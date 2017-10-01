@@ -3,12 +3,90 @@
 	margin: auto;
 }
 #catering {
+	text-align: center;
 	.cateringTop {
-		
+		display: inline-block;
+		margin: 20px auto 0;
+		text-align: center;
+		width: 100%;
+		.title {
+			font-weight: bold;
+			font-size: 22px;
+			letter-spacing: 0.5px;
+		}
+		.row {
+			text-align: left;
+			display: flex;
+			margin: 5px auto;
+			width: 500px;
+			max-width: 90%;
+			&:nth-child(2) {
+				margin-top: 15px;
+			}
+			.left {
+				flex-basis: 50%;
+				font-weight: bold;
+				color: $lightOrange;
+			}
+			.right {
+				flex-basis: 50%;
+				.col:not(:first-child){
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	.packages {
+		line-height: 1.25;
+		.title {
+			background-color: $lightOrange;
+			color: $white;
+			font-weight: bold;
+			padding: 5px;
+			font-size: 20px;
+			margin: 15px auto;
+			border-radius: 5px;
+		}
+		.package {
+			display: flex;
+			margin: 5px auto;
+			.left {
+				flex-basis: 50%;
+				text-align: left;
+				.name {
+					color: $lightOrange;
+					font-weight: bold;
+				}
+				.description {
+					font-size: 16px;
+				}
+			}
+			img {
+				flex-basis: 50%;
+			}
+		}
 	}
 }
 #myStory {
+	.subHero {
+		background-color: $black;
+		color: $lightOrange;
+		font-size: 16px;
+		text-align: center;
+		line-height: 1.25;
+		padding: 20px;
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+		>div {
+			width: 80%;
+			min-width: 300px;
+			margin: auto;
+		}
+	}
 	.qna {
+		line-height: 1.25;
 		.question {
 			font-size: 18px;
 			color: $orange;
@@ -24,7 +102,6 @@
 			color: $black;
 			p {
 				margin-top: 15px;
-				line-height: 1.25;
 			}
 		}
 	}

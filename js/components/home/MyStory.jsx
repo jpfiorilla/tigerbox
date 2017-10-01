@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Link } from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { Header, Footer } from '../ui';
 
 export default class MyStory extends React.Component {
   constructor(props){
@@ -16,8 +17,10 @@ export default class MyStory extends React.Component {
   render() {
     return (
       <div id="myStory">
-        <div id='header'>
-          <img src='images/tigerboxheader.jpg' />
+        <Header />
+        <div className='subHero'>
+          <div className=''>This is my story as told to <a target="__blank" href='https://www.nxt-chptr.com'>Francie Jain at Nxt Chptr</a>, a community for Moms returning to the workforce.</div>
+          <div>The website will be launched in mid-September.</div>
         </div>
         <div className='cateringTop'>
           {
@@ -28,6 +31,7 @@ export default class MyStory extends React.Component {
             </div>)
           }
         </div>
+        <Footer />
       </div>
     );
   }
