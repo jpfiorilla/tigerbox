@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import OrderForm from './OrderForm';
 import Cart from './Cart';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { Header } from '../ui';
 
 const page = {
     hours: [{ days: `Mon Tue Wed Fri`, times: `10:00AM to 4:00PM` }, { days: `Thur Sun`, times: `10:00AM to 11:45PM` }]
@@ -26,9 +27,7 @@ class HomePage extends React.Component {
         <CSSTransitionGroup transitionName='cart' transitionEnterTimeout={150} transitionLeaveTimeout={150}>
           { Object.keys(this.props.cart || {}).length && <Cart /> }
         </CSSTransitionGroup>
-        <div id='header'>
-          <img src='images/tigerboxheader.jpg' />
-        </div>
+        <Header />
         <div className='content'>
           <div className='infobox'>
             <div className='addrPhone'>

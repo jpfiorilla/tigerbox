@@ -34,9 +34,9 @@ const server = app.listen(process.env.PORT || 3000, function () {
 
 let mongoUri = `mongodb://tigerbox:tiger330@ds159033.mlab.com:59033/tigerboxusers`;
 
-// /* comment if working offline
+/* comment if working offline
 mongoose.connect(mongoUri, (err) => { if (err) { throw err; } });
 const db = mongoose.connection;
 db.on('error', console.log.bind(console, 'connection error:'));
 db.once('open', () => console.log('DB is now connected!'));
-// */
+*/
