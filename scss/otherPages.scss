@@ -49,7 +49,7 @@
 		}
 		.package {
 			display: flex;
-			margin: 5px auto;
+			margin: 15px auto;
 			.left {
 				flex-basis: 50%;
 				text-align: left;
@@ -61,8 +61,15 @@
 					font-size: 16px;
 				}
 			}
-			img {
+			.right {
 				flex-basis: 50%;
+				img {
+					width: 100%;
+					transition: 150ms ease;
+					&:hover {
+						transform: scale(1.05);
+					}
+				}
 			}
 		}
 	}
@@ -102,6 +109,36 @@
 			color: $black;
 			p {
 				margin-top: 15px;
+			}
+		}
+	}
+}
+#gallery {
+	.title {
+		color: $green;
+		font-size: 22px;
+		text-align: left;
+		padding-left: 10px;
+		margin: 25px auto 10px;
+		font-weight: bold;
+	}
+	.photos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.photo {
+			flex-basis: 30%;
+			margin: 10px;
+			.subtitle {
+				font-size: 16px;
+			}
+			img {
+				width: 100%;
+				margin-top: 5px;
+				transition: 150ms ease;
+				&:hover {
+					transform: scale(1.05);
+				}
 			}
 		}
 	}

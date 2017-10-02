@@ -37,7 +37,9 @@ export default class Catering extends React.Component {
                 <div className='name'>{(i+1) + '. ' + pack.name}</div>
                 <div className='description'>{pack.description}</div>
               </div>
-              <img src={'images/' + pack.img} />
+              <div className='right'>
+                <img src={'images/' + (pack.img || ((i+1) + '.jpg'))} />
+              </div>
             </div>)
           }
         </div>

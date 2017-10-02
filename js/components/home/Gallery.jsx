@@ -18,6 +18,7 @@ export default class Gallery extends React.Component {
     return (
       <div id="gallery">
         <Header />
+        <div className='title'>GALLERY</div>
         <div className='photos'>
           {
             photos.map(photo => <div className='photo'>
@@ -35,18 +36,18 @@ export default class Gallery extends React.Component {
 const photos = [
   {
     subtitle: 'Mandoo Making Day',
-    img: ''
+    img: 'mandoo.JPG'
   },
   {
     subtitle: 'Bulgogi (Box or Bowl)',
-    img: ''
+    img: 'bulgogi.jpg'
   },
   {
     subtitle: 'Spicy Pork Ssam (Appetizer)',
-    img: ''
+    img: 'spicy.jpg'
   },
   {
     subtitle: 'Steamed Mandoo',
-    img: ''
+    img: 'steamed.JPG'
   }
 ]
