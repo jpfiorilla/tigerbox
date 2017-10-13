@@ -11,6 +11,7 @@ import HomePage from './components/home/HomePage';
 import Catering from './components/home/Catering';
 import Gallery from './components/home/Gallery';
 import MyStory from './components/home/MyStory';
+import Checkout from './components/home/Checkout';
 import { CreateAccount } from './components/account';
 
 const store = configureStore();
@@ -27,6 +28,7 @@ render((
 					<Route path="/catering" component={Catering} />
 					<Route path="/gallery" component={Gallery} />
 					<Route path="/my-story" component={MyStory} />
+					<Route path="/checkout" component={Checkout} />
 	    </Route>
 	  </Router>
 	</Provider>

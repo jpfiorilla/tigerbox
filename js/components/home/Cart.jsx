@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import menu from './menu';
@@ -17,6 +17,10 @@ class Cart extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
+  }
+  handleCheckout = () => {
+    console.log(this.props.cart);
+    browserHistory.push('/checkout');
   }
   render() {
     let cart = [], subtotal = 0;
@@ -52,6 +56,7 @@ class Cart extends React.Component {
           </CSSTransitionGroup>
         </div>
         { subtotal > 0 && <div className='subtotal'>{format(subtotal, { code: 'USD' })}</div> }
+        <button onClick={this.handleCheckout}>Checkout</button>
       </div>
     );
   }
