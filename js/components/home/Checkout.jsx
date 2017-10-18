@@ -5,10 +5,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import menu from './menu';
 import { format } from 'currency-formatter';
-import * as actions from '../../actions/cartActions';
+import { cartSet } from '../../actions/cartActions';
 import flatten from 'lodash.flatten';
 import CartWidget from './CartWidget';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { Footer } from '../ui';
 
 const squareAppId = `sq0idp-z1X8pQapeL6bDOGxECZ4ww`;
 const squarePersonalAccessToken = `sq0atp-NEqlBcSgWN-whfoODJwenw`;
@@ -23,7 +24,10 @@ class Checkout extends React.Component {
   render() {
     return (
       <div id="checkout">
-        
+        <div className='content'>
+          
+        </div>
+        <Footer />
       </div>
     );
   }
@@ -31,10 +35,4 @@ class Checkout extends React.Component {
 
 const mapStateToProps = ({ cart }) => ({ cart });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actions, dispatch)
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
+export default connect(mapStateToProps, { cartSet })(Checkout);
