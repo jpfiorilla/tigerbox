@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
   render() {
     return (
       <nav>
-        { links.map(link => <Link to={slugify(link)}>{link}</Link>) }
+        { links.map(link => <Link to={slugify(link)} key={link}>{link}</Link>) }
       </nav>
     );
   }

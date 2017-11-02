@@ -11,9 +11,9 @@ export default class Header extends React.Component {
     return (
       <div id='header'>
         <Nav />
-        <Link to="/">
+        { !this.props.logoless && <Link to="/">
           <img src='images/tigerboxheader.jpg' />
-        </Link>
+        </Link> }
       </div>
     );
   }

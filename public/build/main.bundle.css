@@ -531,6 +531,99 @@ select {
       #gallery .photos .photo img:hover {
         transform: scale(1.05); }
 
+/* Define how SqPaymentForm iframes should look */
+.sq-input {
+  border: 1px solid #dfdfdf;
+  outline-offset: -2px;
+  margin-bottom: 5px;
+  display: inline-block; }
+
+/* Define how SqPaymentForm iframes should look when they have focus */
+.sq-input--focus {
+  outline: 5px auto #3b99fc; }
+
+/* Define how SqPaymentForm iframes should look when they contain invalid values */
+.sq-input--error {
+  outline: 5px auto #ff6161; }
+
+/* Customize the "Pay with Credit Card" button */
+.button-credit-card {
+  min-width: 200px;
+  min-height: 20px;
+  padding: 0;
+  margin: 5px;
+  line-height: 20px;
+  box-shadow: 2px 2px 1px #c8c8c8;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8;
+  font-weight: bold;
+  cursor: pointer; }
+
+/* Customize the "{{Wallet}} not enabled" message */
+.wallet-not-enabled {
+  min-width: 200px;
+  min-height: 40px;
+  max-height: 64px;
+  padding: 0;
+  margin: 10px;
+  line-height: 40px;
+  background: #eee;
+  border-radius: 5px;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: inherit;
+  display: block; }
+
+/* Customize the Apple Pay on the Web button */
+.button-apple-pay {
+  min-width: 200px;
+  min-height: 40px;
+  max-height: 64px;
+  padding: 0;
+  margin: 10px;
+  background-image: -webkit-named-image(apple-pay-logo-white);
+  background-color: black;
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; }
+
+/* Customize the Masterpass button */
+.button-masterpass {
+  min-width: 200px;
+  min-height: 40px;
+  max-height: 40px;
+  padding: 0;
+  margin: 10px;
+  background-image: url("https://static.masterpass.com/dyn/img/btn/global/mp_chk_btn_147x034px.svg");
+  background-color: black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 5px;
+  border-color: white;
+  cursor: pointer;
+  display: none; }
+
+#sq-walletbox {
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  font-weight: bold; }
+
+#sq-ccbox {
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  font-weight: bold; }
+
 body {
   background-color: #FBF4E0;
   color: #2d2e2e;
