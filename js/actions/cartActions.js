@@ -28,6 +28,12 @@ export function cartSet(obj){
 	}
 }
 
+export function sendNonce(nonce){
+	return function(dispatch){
+		return dispatch(sendCartObjToCart(obj));
+	}
+}
+
 // export function createAccountSuccess(res) {
 // 	console.log('response', res);
 // 	if (res.success){

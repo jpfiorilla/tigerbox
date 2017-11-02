@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { sendNonce } from '../../actions/cartActions';
 import SquarePaymentForm from 'react-square-hosted-fields';
 
 const squareAppId = `sq0idp-z1X8pQapeL6bDOGxECZ4ww`;
@@ -15,19 +16,23 @@ class Square extends React.Component {
     super(props);
     this.state = {};
   }
-  handleNonce = (nonce) => {
-    console.log(nonce);
+  handleNonce = (nonce, cardData) => {
+    console.log(nonce, cardData);
+    this.props.sendNonce(nonce);
   }
   handleGetError = (res) => {
     console.log(res);
   }
+  handleNonceError = (err) => {
+    console.log(err);
+  }
   render() {
     return (
-      <SquarePaymentForm appId={squareAppId} onNonceGenerated={this.handleNonce} onGetAppIdError={this.handleGetError} />
+      <SquarePaymentForm appId={squareAppId} onNonceGenerated={this.handleNonce} onGetAppIdError={this.handleGetError} onNonceError={this.handleNonceError} />
     );
   }
 }
 
 const mapStateToProps = ({ cart }) => ({ cart });
 
-export default connect(mapStateToProps, {  })(Square);
+export default connect(mapStateToProps, { sendNonce })(Square);
